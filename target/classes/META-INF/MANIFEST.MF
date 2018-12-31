@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: FashionApp
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: sindhu
+Implementation-Vendor-Id: fashionapp.co
+Build-Jdk: 1.8.0_121
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/fashionapp
+Created-By: Maven Integration for Eclipse
+

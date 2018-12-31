@@ -1,0 +1,22 @@
+ @GetMapping("/notes/{id}")
+    public Note getNoteById(@PathVariable(value = "id") Long noteId) {
+        return noteRepository.findById(noteId);
+                
+    }
+
+    // Update a Note
+    
+    @PutMapping("/notes/{id}")
+    public Note updateNote(@PathVariable(value = "id") Long noteId,
+                                            @Valid @RequestBody Note noteDetails) {
+
+        Note note = noteRepository.findById(noteId);
+                
+
+        note.setTitle(noteDetails.getTitle());
+        note.setContent(noteDetails.getContent());
+
+        Note updatedNote = noteRepository.save(note);
+        return updatedNote;
+    }
+

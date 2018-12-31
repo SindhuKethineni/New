@@ -1,0 +1,13 @@
+BaseResponse<User> baseResponse=null;
+User userdata = userrepository.findByEmailId(user.getEmailId());
+if(userdata!=null)
+{
+baseResponse= new BaseResponse<User>("email already exists","False");
+}
+else {
+
+       User userinfo= userrepository.save(user);
+
+       baseResponse= new BaseResponse<User>("successfully created","True",userinfo);
+}
+return baseResponse;
